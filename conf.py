@@ -11,5 +11,5 @@ class conf:
     samples = sampling_rate * duration
 
     
-    def get_default_conf():
+    def get_default_conf(self):
         return conf

@@ -1,4 +1,4 @@
-import requests
+import requests,json
 
 # server url
 URL = "http://127.0.0.1:5000/predict"
@@ -16,9 +16,10 @@ if __name__ == "__main__":
     # package stuff to send and perform POST request
     values = {"file": (FILE_PATH, file, "audio/wav")}
     response = requests.post(URL, files=values)
-    data = response.json()
+    # data = response.json()
 
-    print("Predicted keyword: {}".format(data["keyword"]))
+    print(response)
+    #print("Predicted keyword: {}".format(data["keyword"]))
 
 
 
